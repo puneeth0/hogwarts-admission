@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hogwarts-admission-development
+spec:
+  selector:
+    matchLabels:
+      app: hogwarts-admission
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hogwarts-admission
+    spec:
+      containers:
+        - name: hogwarts-admission
+          image: puneeth0/hogwarts-admission
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8084
