@@ -1,5 +1,8 @@
 package com.example.hogwarts_admission.model;
 
+import java.util.List;
+
+
 public class HarryPotterCharacter {
 
     // Getters and Setters
@@ -20,6 +23,16 @@ public class HarryPotterCharacter {
     private String snitchMatchPlayer; // Whether the character plays Snitch Match
 
     private String gender; // Gender of the character
+
+    private List<String> frequentlyUsedSpells;
+
+    public List<String> getFrequentlyUsedSpells() {
+        return frequentlyUsedSpells;
+    }
+
+    public void setFrequentlyUsedSpells(List<String> frequentlyUsedSpells) {
+        this.frequentlyUsedSpells = frequentlyUsedSpells;
+    }
 
     public Long getId() {
         return id;
